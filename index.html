@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Елизавета Чапурен</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #4361ee;
+      --secondary: #3f37c9;
+      --accent: #4cc9f0;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --gray: #6c757d;
+      --success: #4ade80;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4edf9 100%);
+      color: var(--dark);
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: #e0f7fa;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.95rem;
+      color: #00796b;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 30px;
+    }
+
+    .avatar {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 10px 30px rgba(67, 97, 238, 0.3);
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .avatar:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      color: var(--secondary);
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--gray);
+      margin-bottom: 25px;
+    }
+
+    section {
+      background: white;
+      border-radius: 16px;
+      padding: 35px;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      transition: transform 0.2s;
+      animation: fadeIn 0.6s ease-out forwards;
+      opacity: 0;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      margin-bottom: 25px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #3498db;
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 5px;
+    }
+
+    .timeline-item .date {
+      color: #7f8c8d;
+      font-style: italic;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .contact-links p {
+      margin: 8px 0;
+    }
+
+    .contact-links a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-links a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section:nth-of-type(1) { animation-delay: 0.1s; }
+    section:nth-of-type(2) { animation-delay: 0.2s; }
+    section:nth-of-type(3) { animation-delay: 0.3s; }
+    section:nth-of-type(4) { animation-delay: 0.4s; }
+    section:nth-of-type(5) { animation-delay: 0.5s; }
+
+    @media (max-width: 768px) {
+      .avatar {
+        width: 200px;
+        height: 200px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      section {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="images/your-photo.jpg" alt="Фото Елизаветы Чапурен" class="avatar">
+      <h1>Елизавета Чапурен</h1>
+      <p class="subtitle">Студентка ВГУ Факультета Компьютерных наук</p>
+    </header>
+
+<section id="about">
+      <h2>Обо мне</h2>
+      <p>Привет! Хочу поделиться некоторыми фактами, связанными со мной.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Мои увлечения</h2>
+      <div class="skills">
+        <span class="skill">Танцы</span>
+        <span class="skill">Волейбол</span>
+        <span class="skill">Спорт</span>
+        <span class="skill">Кулинария (для души и вкусной еды для себя и близких)</span>
+        <span class="skill">Путешествия</span>
+      </div>
+    </section>
+
+    <section id="hobbies-details">
+      <h2>Более подробно обо мне и моих увлечениях</h2>
+      <p>Я очень люблю фильмы и сериалы, и в любую свободную минутку (чаще всего это бывает по выходным) после тяжёлой недели я стараюсь посмотреть какие-нибудь интересные фильмы или сериалы.</p>
+      <p>Поэтому я решила поделиться ссылкой, где можно увидеть список различных фильмов или сериалов, которые вам могут понравиться!</p>
+      <p>
+        <a href="https://www.eldorado.ru/blog/publications/spisok-luchshikh-semeynykh-filmov-s-vysokim-reytingom-36136?utm_source=yandex&utm_medium=organic&utm_campaign=yandex&utm_referrer=yandex" target="_blank">Кликни сюда!</a>
+        А перейдя по следующей <a href="portfolio.html">ссылке</a>, можно узнать немного больше интересных фактов обо мне!
+      </p>
+    </section>
+
+    <section id="education">
+      <h2>Образование</h2>
+      <div class="timeline-item">
+        <span class="date">2025 — 2029</span>
+        <h3>ФКН: "Прикладная информатика в экономике"</h3>
+        <p>Воронежский государственный университет</p>
+      </div>
+    </section>
+
+    <section id="contacts">
+      <h2>Контакты</h2>
+      <div class="contact-links">
+        <p>📧 Email: <a href=":elizavetachapuren@yandex.ru">elizavetachapuren@yandex.ru</a></p>
+        <p>📱 Телефон: +7 (951) 544-72-93</p>
+        <p>💼 VK: <a href="https://vk.com/chilaveka" target="_blank">Чапурен Елизавета</a></p>
+      </div>
+    </section>
+
+    <footer>
+      <p>© Чапурен Е.В., 2025</p>
+    </footer>
+  </div>
+</body>
+</html>
